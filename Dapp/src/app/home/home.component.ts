@@ -53,6 +53,10 @@ export class HomeComponent implements OnInit {
       "uid": this.uid
     }
    window.localStorage.setItem("iden", JSON.stringify(obj));
+   this.setStatus("Registered Successfully!");
+  //  this.uname ='';
+  //  this.uid = '';
+  //  this.passwd = '';
    this.router.navigateByUrl('/login2')
   }
 
@@ -64,10 +68,13 @@ export class HomeComponent implements OnInit {
         this.passwd = res.hash;
       },
       error => {
-        console.log(error.error.text);
+        // console.log(error.error.text);
 
       }
     );
   }
 
+  setStatus(status) {
+    this.matSnackBar.open(status, null, { duration: 5000 });
+  }
 }

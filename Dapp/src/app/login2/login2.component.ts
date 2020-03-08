@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { HttpClient } from "@angular/common/http";
 import { Router } from '@angular/router';
-
+import { MatSnackBar } from "@angular/material";
 
 @Component({
   selector: 'app-login2',
@@ -17,7 +17,8 @@ export class Login2Component implements OnInit {
   showwait: boolean;
   register: boolean;
 
-  constructor(public dialog: MatDialog,
+  constructor(
+    private matSnackBar: MatSnackBar,
     private http: HttpClient,
     private router: Router
 
@@ -43,7 +44,10 @@ export class Login2Component implements OnInit {
             this.http.get(url2).subscribe(
               res2 => {
                 if(res2 == true){
+                  this.showwait = false;
+                  this.setStatus("Logged In Successfully!");
                   this.router.navigateByUrl('/beg_voting')
+
                 }
               },
               error => {
@@ -56,12 +60,11 @@ export class Login2Component implements OnInit {
             console.log(error.error.text);
     
           }
-        );
-      
-    }
-  
+        );      
+    }  
   }
   
-
+  setStatus(status) {
+    this.matSnackBar.open(status, null, { duration: 5000 });
+  }
 }
-
