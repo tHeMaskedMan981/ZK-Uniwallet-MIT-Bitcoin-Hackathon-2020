@@ -23,7 +23,7 @@ export class BegVotingComponent implements OnInit {
     {val: 'bsp-2', name: 'BSP'}
   ];
   verified=false;
-  voting_passwd: string='';
+  // voting_passwd: string='';
   voted_cdt: string ='';
   constructor(
     private matSnackBar: MatSnackBar,
@@ -37,10 +37,11 @@ export class BegVotingComponent implements OnInit {
   }
 
   vote() {
+    
     this.success=true;
-    console.log(this.voted_cdt);
-    console.log(this.voting_passwd)
+
   }
+
   vA() {
     let url = "http://localhost:8080/age/proof";
     this.http.get(url).subscribe(

@@ -27,7 +27,6 @@ export class Login2Component implements OnInit {
   ngOnInit() {  
     this.showwait = false;
     this.register = false;
-
   }
 
   enterUname() {
