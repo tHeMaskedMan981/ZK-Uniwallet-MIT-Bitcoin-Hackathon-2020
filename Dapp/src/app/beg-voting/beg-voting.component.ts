@@ -40,7 +40,6 @@ export class BegVotingComponent implements OnInit {
   }
 
   vote() {
-<<<<<<< HEAD
     console.log(this.voted_cdt);
     console.log(this.voting_passwd)
     let url3 = zkURL + "vote/proof?secret=" + this.voting_passwd + "&x1=234&x2=789&x3=" + this.voting_passwd;
@@ -48,11 +47,6 @@ export class BegVotingComponent implements OnInit {
       res => { console.log(res); this.success = true },
       error => { console.log(error) }
     )
-=======
-    
-    this.success=true;
-
->>>>>>> 8a8f5d1d126e3431e40fb1cfd36ee58fb4560c2d
   }
 
   vA() {
