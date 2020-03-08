@@ -60,17 +60,11 @@ export class Login2Component implements OnInit {
             console.log(error.error.text);
     
           }
-        );
-      
-    }
-
-   
-
-  
+        );      
+    }  
   }
   
   setStatus(status) {
     this.matSnackBar.open(status, null, { duration: 5000 });
   }
 }
-
