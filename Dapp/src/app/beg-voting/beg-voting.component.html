@@ -38,8 +38,10 @@
     color: #212121;">
       Begin Voting
     </h4>
-    <div style="height: 30px"></div>
-
+    <div style="height: 50px"></div>
+    <button *ngIf="verified"mat-raised-button style="background-color: #487BE3; width: 60%; color: white"
+     (click)="vA()"
+    >Verify Age</button>
     <div style="font-size: 12px">
     <mat-form-field appearance="outline" style="width: 60%; height: 60; margin-bottom: -1.25em;">
       <mat-label>Select Candidate</mat-label>
