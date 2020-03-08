@@ -4,6 +4,9 @@ import { HttpClient } from "@angular/common/http";
 import { Router } from '@angular/router';
 import { MatSnackBar } from "@angular/material";
 
+const zkURL = "http://18.21.191.249:3000/";
+
+
 @Component({
   selector: 'app-login2',
   templateUrl: './login2.component.html',
@@ -40,7 +43,7 @@ export class Login2Component implements OnInit {
         this.http.get(url).subscribe(
           res => {
             console.log(res);
-            let url2 = "http://192.168.10.130:3000/password/verify?passproof=" + JSON.stringify(res);
+            let url2 = zkURL + "password/verify?passproof=" + JSON.stringify(res);
             this.http.get(url2).subscribe(
               res2 => {
                 if(res2 == true){
