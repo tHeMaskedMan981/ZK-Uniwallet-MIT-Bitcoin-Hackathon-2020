@@ -47,6 +47,7 @@ async function get_hash(password){
     let finalHash = out0 + out1;
     console.log("here", finalHash);
     return finalHash;
+    
 }
 
 
@@ -54,15 +55,17 @@ async function get_hash(password){
 async function main(){
 
     let age_proof = await generate_age_proof(21, 18);
-    console.log(JSON.stringify(age_proof));
-    let x = BigNumber("c6481e22c5ff4164af680b8cfaa5e8ed", 16);
-    let x2 = BigNumber("3120eeff89c4f307c4a6faaae059ce10", 16); 
-
+    console.log(JSON.stringify(password_proof));
     let hash = await get_hash(5);
-    console.log("hash in main : ", hash);
-
+    console.log(hash);
     let password_proof = generate_password_proof(5, hash);
-    console.log(password_proof);
+    console.log(JSON.stringify(password_proof));
 }
 
-main();
+module.exports = {
+
+    generate_age_proof,
+    generate_password_proof,
+    get_hash
+
+}
