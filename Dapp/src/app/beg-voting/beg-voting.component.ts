@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Router } from '@angular/router';
+import { MatSnackBar } from "@angular/material";
 
 interface Candidate {
   val: string;
@@ -25,6 +26,7 @@ export class BegVotingComponent implements OnInit {
   voting_passwd: string='';
   voted_cdt: string ='';
   constructor(
+    private matSnackBar: MatSnackBar,
     private http: HttpClient,
     private router: Router
   ) { }
@@ -49,6 +51,7 @@ export class BegVotingComponent implements OnInit {
           res2 => {
             console.log(res2)
             this.verified = !res2;
+            this.setStatus("Age Verified Successfully!")
           },
           error => {
 
@@ -60,5 +63,8 @@ export class BegVotingComponent implements OnInit {
 
       }
     );
+  }
+  setStatus(status) {
+    this.matSnackBar.open(status, null, { duration: 3000 });
   }
 }
