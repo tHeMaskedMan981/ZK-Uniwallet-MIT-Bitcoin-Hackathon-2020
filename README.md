@@ -59,7 +59,7 @@ Making the Desktop wallet compatible with multiple Blockchains was pretty challe
 Building a Desktop app using Electron.JS was something new that we tried in this Hackathon. And, we tried using Zokrates for building ZK-Box that supports complicated ZK proofs.
 
 ## Contributors 
-[Akash](https://in.linkedin.com/in/akash981) - Blockchain dev
-[Sarang Parikh](https://in.linkedin.com/in/sarang-parikh) - Blockchain dev
-[Riya Singh](https://in.linkedin.com/in/riya-singh-5aa773193) - Frontend dev
-[Somesh K S](https://in.linkedin.com/in/someshks) - UI/UX designer
+- [Akash](https://in.linkedin.com/in/akash981) - Blockchain dev
+- [Sarang Parikh](https://in.linkedin.com/in/sarang-parikh) - Blockchain dev
+- [Riya Singh](https://in.linkedin.com/in/riya-singh-5aa773193) - Frontend dev
+- [Somesh K S](https://in.linkedin.com/in/someshks) - UI/UX designer
