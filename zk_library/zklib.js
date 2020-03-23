@@ -33,6 +33,19 @@ async function generate_password_proof(password, password_hash){
     return proof;
 }
 
+async function generate_vote_proof(secret, x1, x2, x3){
+
+    let compute_witness_command = 'zokrates compute-witness -a ' + String(secret) + ' ' + String(x1) + ' ' + String(x2) + ' ' + String(x3);
+    console.log(compute_witness_command);
+    execSync(compute_witness_command, {cwd: '/home/akash/Videos/MIT-Blockchain-Hackathon-2020/zk_library/vote', encoding: 'utf-8', maxBuffer:10000*1024 });
+
+    let generate_proof_command = 'zokrates generate-proof';
+    execSync(generate_proof_command, {cwd: '/home/akash/Videos/MIT-Blockchain-Hackathon-2020/zk_library/vote', encoding: 'utf-8', maxBuffer:10000*1024 });
+    let proof = require("./vote/proof.json");
+
+    return proof;
+}
+
 async function get_hash(password){
 
     let compute_witness_command = 'zokrates compute-witness -a 0 0 0 ' + String(password);
@@ -66,6 +79,7 @@ module.exports = {
 
     generate_age_proof,
     generate_password_proof,
-    get_hash
+    get_hash,
+    generate_vote_proof
 
 }

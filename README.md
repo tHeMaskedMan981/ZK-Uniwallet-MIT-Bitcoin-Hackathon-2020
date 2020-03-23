@@ -1,4 +1,5 @@
-# MIT-Blockchain-Hackathon-2020
+<h1 align="center"> MIT-Bitcoin-Hackathon-2020 </h1>
+<h2 align="center"> ZK - Uniwallet </h2>
 
 ## Inspiration
 
@@ -6,9 +7,13 @@ Most of the Crypto users use wallets as their primary gateway to enter Web3 for 
 
 Also, in the current day world, there is a huge overhead involved in creating a zero-knowledge proofs based application. Significant background knowledge of the working or zk technologies is required, which inspired us to build a redefined platform that improves the overall usability and makes the process simpler. There's a lack of Zero-knowledge based applications in the market that solves the Identity-related problems. Using our zk-box, the developer can get basic zk proofs based functionality out of the box, without worrying about underlying technology.
 
+## Our solution
 
+<img src="./wallet.jpg">
+<h4 align="center"> Universal wallet </h4>
+<img src="./dapp.jpg">
+<h4 align="center"> An example Dapp using zk-functionalities </h4>
 
-## What it does
 
 We have 3 major modules in our project,
 
@@ -40,24 +45,8 @@ c. ZK-Box
 
 4. We used Angular and Express.JS for Front-end and Back-end.
 
-
-
-## Challenges we ran into
-
-Making the Desktop wallet compatible with multiple Blockchains was pretty challenging to solve.
-
-
-
-## Accomplishments that we're proud of
-
-· We have successfully created a Crypto wallet that works seamlessly across all the Blockchains and across all the platforms.
-
-
-
-## What we learned
-
-Building a Desktop app using Electron.JS was something new that we tried in this Hackathon. And, we tried using Zokrates for building ZK-Box that supports complicated ZK proofs.
-
+## Devpost Submission
+The project was submitted on devpost during the hackathon. [Here](https://devpost.com/software/zk-uniwallet) is the submission.
 ## Contributors 
 - [Akash](https://in.linkedin.com/in/akash981) - Blockchain dev
 - [Sarang Parikh](https://in.linkedin.com/in/sarang-parikh) - Blockchain dev

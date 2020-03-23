@@ -598,7 +598,7 @@ contract AgeVerifier {
             inputValues[i] = input[i];
         }
         if (verify(inputValues, proof) == 0) {
-            emit Verified("Transaction successfully verified.");
+            // emit Verified("Transaction successfully verified.");
             return true;
         } else {
             return false;
